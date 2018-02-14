@@ -38,4 +38,11 @@ public class HelloController {
         return "welcome/home";
     }
 
+    @RequestMapping(value="/postdl", method = {RequestMethod.POST})
+    public String postDownload() {
+        logger.info("postDownload()");
+
+        return "xmlFileDownloadView";
+    }
+
 }
