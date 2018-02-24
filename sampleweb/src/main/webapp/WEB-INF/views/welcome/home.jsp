@@ -11,11 +11,8 @@
         <h1>Hello world!</h1>
         <p>The time on the server is ${serverTime}.</p>
     </div>
-    <div>
-        <h2>ファイルダウンロード</h2>
-        <form:form method="POST" action="${pageContext.request.contextPath}/postdl">
-            <input type="submit" value="POSTでダウンロード"/>
-        </form:form>
-    </div>
+    <form:form method="GET" action="${pageContext.request.contextPath}/download">
+        <input type="submit" value="ダウンロードページへ"/>
+    </form:form>
 </body>
 </html>

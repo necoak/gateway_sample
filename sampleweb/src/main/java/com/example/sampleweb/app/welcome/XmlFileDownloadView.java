@@ -1,6 +1,7 @@
 package com.example.sampleweb.app.welcome;
 
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.PathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import org.terasoluna.gfw.web.download.AbstractFileDownloadView;
@@ -18,7 +19,8 @@ public class XmlFileDownloadView extends AbstractFileDownloadView {  // (2)
     protected InputStream getInputStream(Map<String, Object> model,
                                          HttpServletRequest request) throws IOException {  // (3)
 
-        Resource resource = new ClassPathResource("/resources/abc.txt");
+        //Resource resource = new ClassPathResource("abc.txt");
+        Resource resource = new PathResource("C:/tmp/abc.txt");
         return resource.getInputStream();
     }
 
