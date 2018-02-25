@@ -27,8 +27,9 @@ public class DownloadController {
     }
 
     @RequestMapping(method = {RequestMethod.POST}, params = "filedownload")
-    public String postDownload(@RequestParam("filedownload") String downloadFilename) {
+    public String postDownload(@RequestParam("filedownload") String downloadFilename, Model model) {
 
+        model.addAttribute("filename", downloadFilename);
         return "xmlFileDownloadView";
     }
 
