@@ -14,5 +14,7 @@
     <form:form method="GET" action="${pageContext.request.contextPath}/download">
         <input type="submit" value="ダウンロードページへ"/>
     </form:form>
+
+    <a href="${pageContext.request.contextPath}/">Topに戻る</a>
 </body>
 </html>
