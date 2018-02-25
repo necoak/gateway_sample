@@ -8,13 +8,16 @@
 </head>
 <body>
     <div id="wrapper">
-        <h1>Hello world!</h1>
+        <h1>サンプルのトップページ</h1>
         <p>The time on the server is ${serverTime}.</p>
     </div>
     <form:form method="GET" action="${pageContext.request.contextPath}/download">
         <input type="submit" value="ダウンロードページへ"/>
     </form:form>
 
-    <a href="${pageContext.request.contextPath}/">Topに戻る</a>
+    <form:form method="GET" action="${pageContext.request.contextPath}/upload">
+        <input type="submit" value="アップロードページへ"/>
+    </form:form>
+
 </body>
 </html>

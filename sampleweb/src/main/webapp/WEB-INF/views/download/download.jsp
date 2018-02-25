@@ -17,19 +17,13 @@
 
 <div>
     <h2>ファイルダウンロード</h2>
-    <form:form method="POST" action="${pageContext.request.contextPath}/download">
-        <input type="submit" name="filedownload" value="POSTでダウンロード"/>
-    </form:form>
-    <div>
-        <c:forEach var="downloadfile" items="${downloadfiles}">
-            <div><c:out value="${downloadfile.getName()}"></c:out></div>
-        </c:forEach>
-    </div>
 
     <div>
         <form:form method="POST" action="${pageContext.request.contextPath}/download">
             <c:forEach var="downloadfile" items="${downloadfiles}">
-                <input type="submit" name="filedownload" value="${downloadfile.getName()}"/>
+                <div>
+                    <input type="submit" name="filedownload" value="${downloadfile.getName()}"/>
+                </div>
             </c:forEach>
         </form:form>
     </div>
